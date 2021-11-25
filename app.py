@@ -12,15 +12,16 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
+    # df= pd.read_csv('archive/spam(modified).csv', encoding="latin-1")
+
     df= pd.read_csv('archive/spam.csv', encoding="latin-1")
     df.drop(['Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4'], axis=1, inplace=True)
-    # Features and Labels
     df.rename(columns={'v1': 'class', 'v2': 'message'}, inplace=True)
     df['label'] = df['class'].map({'ham': 0, 'spam': 1})
-    X = df['message']
+    
 
     cv = CountVectorizer()
-    X = cv.fit_transform(X) # Fit the Data
+    cv.fit_transform(df['message'])
     
     
     NB_spam_model = open('NB_spam_model.pkl','rb')
