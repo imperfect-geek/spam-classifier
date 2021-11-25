@@ -24,7 +24,7 @@ Sample Test Cases:
       Message your details @ 8327892412 (spam)
 
     > Want to earn money?
-      visit this url : bit.ly/easy_money to earn $100 daily (spam)
+      visit this url : http://bit.ly/easy_money to earn $100 daily (spam)
 
 ---------------------------------------------------------------------------------
 
